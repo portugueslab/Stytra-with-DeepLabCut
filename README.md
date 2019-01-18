@@ -9,4 +9,6 @@ guarantees that this will work with future versions, however it should be straig
  
 The example demonstrates a closed loop experiment in an open-arena tracking situation, using the video provided with DeepLabCut (openfield-Pranav-2018-10-30). 
 The stimulus is a dot tracking the snout position for demonstration purposes, for implementing any other open or closed-loop stimuli please refer
- to the [Stytra documentation](http://www.portugueslab.com/stytra).
+ to the [Stytra documentation](http://www.portugueslab.com/stytra) or the stytra [examples](https://github.com/portugueslab/stytra/tree/master/stytra/examples).
+ 
+If you are using Stytra for your research, please [cite us](https://www.biorxiv.org/content/early/2018/12/10/492553)! 
