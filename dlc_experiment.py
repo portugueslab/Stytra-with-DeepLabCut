@@ -19,8 +19,9 @@ video_file = r"C:\Users\vilim\programs\DeepLabCut\examples\openfield-Pranav-2018
 dlc_cfg_file = r"C:\Users\vilim\programs\DeepLabCut\examples\openfield-Pranav-2018-10-30\dlc-models\iteration-0\openfieldOct30-trainset95shuffle1\test\pose_cfg.yaml"
 model_snapshot_file = 'C:\\Users\\vilim\\programs\\DeepLabCut\\examples\\openfield-Pranav-2018-10-30\\dlc-models\\iteration-0\\openfieldOct30-trainset95shuffle1\\train\\snapshot-850000'
 
+
 # We make a separate class to initialise and store the model." \
-# It should be instanitated only on the tracking process"
+# It should be instantiated only on the tracking process"
 class DLCmodel:
     def __init__(self, dlc_cfg_path, model_snapshot):
         self.dlc_cfg = load_config(dlc_cfg_path)
@@ -34,6 +35,7 @@ class DLCmodel:
         pose = getposeNP(imfull[None, :, :, :], self.dlc_cfg,
                   self.sess, self.inputs, self.outputs, outall=False)
         return pose.reshape(-1, 3)
+
 
 # The tracking (image to data) node is subclassed to use the above defined model
 class DLCNode(ImageToDataNode):
@@ -56,12 +58,13 @@ class DLCNode(ImageToDataNode):
         pose = self.model.predict_im(image)
         return NodeOutput([], self._output_type(*(pose[:, :2].flatten())))
 
+
 # simple camera overlay which shows the positions of the tracked points
 class DLCDisplay(CameraViewWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.points_tracked = pg.ScatterPlotItem(
-            size=5, pxMode=True, brush=(255, 0, 0), pen=None
+            size=10, pxMode=True, brush=(255, 0, 0), pen=None
         )
         self.display_area.addItem(self.points_tracked)
 
@@ -114,7 +117,7 @@ class PosTrackingStimulus(CircleStimulus):
 
 
 class RatProtocol(Protocol):
-    name = "red_left"
+    name = "follow the rat"
     stytra_config = dict(camera=dict(video_file=video_file),
                          tracking=dict(method=MouseTrackPipeline,
                                        estimator=SnoutPositionEstimator))
