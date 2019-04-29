@@ -117,7 +117,7 @@ class PosTrackingStimulus(CircleStimulus):
 
 
 class RatProtocol(Protocol):
-    name = "follow the rat"
+    name = "follow the mouse"
     stytra_config = dict(camera=dict(video_file=video_file),
                          tracking=dict(method=MouseTrackPipeline,
                                        estimator=SnoutPositionEstimator))
