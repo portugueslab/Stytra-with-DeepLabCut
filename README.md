@@ -2,7 +2,7 @@
 
 [![DLC screenshot](dlc.png?raw=true)](http://www.portugueslab.com/files/dlc.mp4)
 
-This example shows how to add custom tracking pipelines to [Stytra](https://github.com/portugueslab/stytra), in this case rats with [DeepLabCut](https://github.com/AlexEMG/DeepLabCut).
+This example shows how to add custom tracking pipelines to [Stytra](https://github.com/portugueslab/stytra), in this case mice with [DeepLabCut](https://github.com/AlexEMG/DeepLabCut).
 The model data was obtained by running an [example notebook](https://github.com/AlexEMG/DeepLabCut/blob/master/examples/Demo_labeledexample_Openfield.ipynb)
 using the version [2.0.2](https://github.com/AlexEMG/DeepLabCut/commit/2a575d5941996949de470758c119c787efc7950b)*. If the API of DeepLabCut changes, we make no
 guarantees that this will work with future versions, however it should be straightforward to adapt.
