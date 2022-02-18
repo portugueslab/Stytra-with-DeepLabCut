@@ -8,7 +8,7 @@ from stytra.gui.camera_display import CameraViewWidget
 from stytra.stimulation.estimators import Estimator
 
 from deeplabcut.pose_estimation_tensorflow.config import load_config
-from deeplabcut.pose_estimation_tensorflow.nnet.predict import getposeNP, setup_pose_prediction
+from deeplabcut.pose_estimation_tensorflow.core.predict import getposeNP, setup_pose_prediction
 
 from collections import namedtuple
 from itertools import chain
